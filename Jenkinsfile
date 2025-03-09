@@ -2,9 +2,16 @@ pipeline{
     agent {label 'java'
     }
     stages{
-        stage{
+        stage('Test'){
             steps{
-                sh
+                sh 'docker -v'
+
+            }
+        }
+        stage('Build'){
+            steps{
+                sh 'docker build -t webapp'
+                
             }
         }
     }
