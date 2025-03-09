@@ -5,14 +5,10 @@ pipeline{
         stage('Test'){
             steps{
                 sh 'docker -v'
+                sh 'java -v'
 
-            }
-        }
-        stage('Build'){
-            steps{
-                sh 'docker build -t webapp .'
-                
             }
         }
     }
 }
+        
