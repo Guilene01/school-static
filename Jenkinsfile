@@ -5,7 +5,7 @@ pipeline{
         stage('Test'){
             steps{
                 sh 'docker -v'
-                sh 'java -v'
+                sh 'java --version'
 
             }
         }
